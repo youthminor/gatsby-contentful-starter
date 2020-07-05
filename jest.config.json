@@ -1,0 +1,25 @@
+{
+  "setupFilesAfterEnv": [
+    "raf/polyfill",
+    "<rootDir>/spec/support/commonSetup.ts",
+    "<rootDir>/spec/support/setup.ts"
+  ],
+  "collectCoverage": true,
+  "coverageDirectory": "spec/coverage/",
+  "moduleFileExtensions": ["js", "ts", "tsx"],
+  "moduleNameMapper": {
+    "^~/(.*)$": "<rootDir>/src/$1",
+    "\\.css$": "identity-obj-proxy",
+    "\\.(jpg|jpeg|png|svg|woff|woff2)$": "<rootDir>/spec/mocks/fileMock.js"
+  },
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  },
+  "globals": {
+    "ts-jest": {
+      "tsConfig": "tsconfig.jest.json"
+    }
+  },
+  "testMatch": ["**/spec/**/*.spec.(ts|tsx)"],
+  "snapshotSerializers": ["enzyme-to-json/serializer"]
+}

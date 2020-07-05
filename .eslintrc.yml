@@ -1,0 +1,77 @@
+---
+env:
+  browser: true
+  node: true
+  es6: true
+extends:
+  - airbnb
+  - plugin:react/recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:prettier/recommended
+  - prettier/react
+  - prettier/@typescript-eslint
+parser: "@typescript-eslint/parser"
+parserOptions:
+  project: "./tsconfig.eslint.json"
+plugins:
+  - "@typescript-eslint"
+  - react
+  - prettier
+  - jest
+rules:
+  import/prefer-default-export:
+    - off
+  no-restricted-syntax:
+    - off
+  prettier/prettier:
+    - error
+  react/jsx-filename-extension:
+    - error
+    - extensions:
+        - .tsx
+  react/prop-types:
+    - off
+  react/no-danger:
+    - off
+  no-console:
+    - off
+  "@typescript-eslint/camelcase":
+    - error
+    - properties: never
+  "@typescript-eslint/explicit-function-return-type":
+    - off
+  "@typescript-eslint/explicit-member-accessibility":
+    - off
+  "@typescript-eslint/no-non-null-assertion":
+    - off
+  "@typescript-eslint/no-explicit-any":
+    - off
+  "react/destructuring-assignment":
+    - off
+  "react/jsx-curly-brace-presence":
+    - off
+  no-underscore-dangle:
+    - off
+  jsx-a11y/label-has-for:
+    - error
+    - required:
+        some:
+          - nesting
+          - id
+  jsx-a11y/label-has-associated-control:
+    - error
+    - assert: htmlFor
+  import/extensions:
+    - off
+  import/order:
+    - off
+  class-methods-use-this:
+    - off
+settings:
+  import/resolver:
+    node:
+      extensions:
+        - .js
+        - .jsx
+        - .ts
+        - .tsx
